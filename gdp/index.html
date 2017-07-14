@@ -1,0 +1,193 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>World GDP</title>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="../dist/css/d3.geomap.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" id="main">
+    <h1 class="pull-left">List of countries by GDP (nominal)</h1>
+    <div class="pull-right" style="margin-top: 1.5em;">
+        <select class="form-control" id="map-select">
+          <option value="world">Global World GDP by Nominal </option>
+          <option value="africa">GDP in Africa</option>
+          <option value="asia">GDP in Asia</option>
+          <option value="europe">GDP in Europe</option>
+          <option value="north-america">GDP in North America</option>
+          <option value="south-america">GDP in South America</option>
+          <option value="oceania">GDP in Ocenia</option>
+        </select>
+    </div>
+    <div id="map"></div>
+    <p>Data source: <a href="https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)">World GDP (Wikipedia)</a></p>
+</div>
+<script src="../node_modules/d3/build/d3.js"></script>
+<script src="../node_modules/d3-geo-projection/build/d3-geo-projection.js"></script>
+<script src="../node_modules/topojson/dist/topojson.js"></script>
+<script src="../dist/js/d3.geomap.js"></script>
+<script>
+
+var worldmap;
+
+var initilize = function(){
+  worldmap = setMap('../dist/topojson/world/countries.json','GPD','iso3');
+
+  d3.csv('gdpworld.csv', function(error, data) {
+      worldmap.draw(d3.select("#map").datum(data));
+  });
+
+  d3.select('#map-select').on('change', function() {    
+    var _column = 'GPD',
+        _unitId = 'geounit',
+        _unit = null,
+        _translate = null,
+        _scale = 450,
+        _geofile;
+
+    switch(this.value){
+      case 'africa':
+          _geofile = '../dist/topojson/world/africa.json';
+          _unit = 'continent_Africa_subunits';          
+          _translate = [450,300];
+        break;
+      case 'asia':
+          _geofile = '../dist/topojson/world/asia.json';
+          _unit = 'continent_Asia_subunits';
+          _scale = 300;
+          _translate = [150,450];
+        break;
+      case 'europe':
+          _geofile = '../dist/topojson/world/europe.json';
+          _unit =  'continent_Europe_subunits';          
+          _translate = [450,700];
+        break;
+      case 'north-america':
+          _geofile = '../dist/topojson/world/north-america.json';
+          _unit = 'continent_North_America_subunits';
+          _scale = 300;
+          _translate = [900,500];
+        break;
+      case 'south-america':
+          _geofile = '../dist/topojson/world/south-america.json';
+          _unit = 'continent_South_America_subunits';          
+          _translate = [900,100];
+        break;
+      case 'oceania':
+          _geofile = '../dist/topojson/world/oceania.json';
+          _unit = 'continent_Oceania_subunits';  
+          _translate = [-450,100];
+        break;
+      default:
+          _geofile = '../dist/topojson/world/countries.json';
+          _unitId = 'iso3';
+        break;
+    }    
+    worldmap = setMap(_geofile,_column,_unitId,_unit,_translate,_scale);    
+
+    reDraw(this.value);
+    // worldmap.column(this.valque).update()
+  });
+};
+
+var setMap = function(_geofile,_column,_unitId,_unit,_translate,_scale){  
+
+  var _worldmap;
+  if(_unit == null){
+    _worldmap = d3.geomap.choropleth()
+    .geofile(_geofile)    
+    .colors(colorbrewer.YlOrRd[9])     
+    .column(_column)
+    .duration(500)
+    .format(function(d) { return "USD " + d3.format(",.0f")(d) + " M"; })
+    .legend(true)
+    .unitId(_unitId)
+    .postUpdate(annotation);  
+  }
+  else{
+    if(_translate == null){
+      _translate = [0,0];
+    }
+    _worldmap = d3.geomap.choropleth()
+    .colors(colorbrewer.YlOrRd[7])    
+    .geofile(_geofile)    
+    .column(_column)      
+    .format(function(d) { return "USD " + d3.format(",.0f")(d) + " M"; })
+    .legend(true)
+    .units(_unit)
+    .unitId(_unitId)
+    .scale(_scale)
+    .translate(_translate)    
+    .postUpdate(annotation);
+  }
+  return _worldmap;
+}
+
+var reDraw = function(continent){
+  //to re-draw maps
+  var csvFile = 'gdpworld.csv';
+  if (continent == 'north-america'){
+    csvFile = 'gdpnorthamerica.csv';
+  }
+  else if (continent == 'south-america'){
+    csvFile = 'gdpsouthamerica.csv';
+  }
+  else if (continent == 'europe'){
+    csvFile = "gdpeurope.csv";
+  }
+  else if (continent == 'asia'){
+    csvFile = "gdpasia.csv";
+  }
+  else if (continent == 'africa'){
+    csvFile = "gdpafrica.csv";
+  }  
+  console.log(csvFile);
+  d3.select('#map').remove();
+  var next_element = document.getElementsByClassName('pull-right');
+  next_element[0].insertAdjacentHTML('afterEnd','<div id="map"></div>');    
+  console.log(csvFile);
+  d3.csv(csvFile, function(error, data) {
+      worldmap.draw(d3.select("#map").datum(data));
+  });    
+}
+
+var annotation = function(){
+  var anno_height = 60;
+
+  // Remove possibly existing annotation, when map is updated.
+  worldmap.svg.selectAll('g.annotation').remove();
+
+  fg = worldmap.svg.append('g')
+    .attr('class', 'annotation')
+    .attr('width', '100%')
+    .attr('height', anno_height)
+    .attr('transform', 'translate(0,' + (worldmap.height() - anno_height) + ')')
+
+  fg.append('rect')
+    .attr('x', '10%')
+    .attr('width', '76%')
+    .attr('height', anno_height)
+    .style('fill-opacity', .8)
+    .style('fill', '#fff');
+
+  fg.append('text')
+    .attr('x', '12%')
+    .attr('y', 22)
+    .style('color', '#444')
+    .style('font-size', '18px')
+    .text('List of countries by GDP (nominal)')
+
+  fg.append('text')
+    .attr('width', '76%')
+    .attr('x', '12%')
+    .attr('y', 45)
+    .style('color', '#444')
+    .style('font-size', '12px')
+    .text('Data source: https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)')
+}
+
+initilize();
+</script>
+</body>
+</html>

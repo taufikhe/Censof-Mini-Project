@@ -1,0 +1,192 @@
+Ranking,Country Name,GPD,geounit,iso3
+1,United States,18569100,UnitedStates,USA
+2,China,11218281,China,CHN
+3,Japan,4938644,Japan,JPN
+4,Germany,3466639,Germany,DEU
+5,United Kingdom,2629188,UnitedKingdom,GBR
+6,France,2463222,France,FRA
+7,India,2256397,India,IND
+8,Italy,1850735,Italy,ITA
+9,Brazil,1798622,Brazil,BRA
+10,Canada,1529224,Canada,CAN
+11,South Korea,1411246,SouthKorea,KOR
+12,Russia,1280731,Russia,RUS
+13,Australia,1258978,Australia,AUS
+14,Spain,1232597,Spain,ESP
+15,Mexico,1046002,Mexico,MEX
+16,Indonesia,932448,Indonesia,IDN
+17,Turkey,857429,Turkey,TUR
+18,Netherlands,771163,Netherlands,NLD
+19,Switzerland,659850,Switzerland,CHE
+20,Saudi Arabia,639617,SaudiArabia,SAU
+21,Argentina,545124,Argentina,ARG
+22,Taiwan,528550,Taiwan,TWN
+23,Sweden,511397,Sweden,SWE
+24,Poland,467591,Poland,POL
+25,Belgium,466960,Belgium,BEL
+26,Thailand,406949,Thailand,THA
+27,Nigeria,405952,Nigeria,NGA
+28,Austria,386752,Austria,AUT
+29,Iran,376755,Iran,IRN
+30,United Arab Emirates,371353,UnitedArabEmirates,ARE
+31,Norway,370449,Norway,NOR
+32,Egypt,332349,Egypt,EGY
+33,Hong Kong,320668,HongKong,HKG
+34,Israel,318386,Israel,ISR
+35,Denmark,306730,Denmark,DNK
+36,Philippines,304696,Philippines,PHL
+37,Singapore,296967,Singapore,SGP
+38,Malaysia,296359,Malaysia,MYS
+39,South Africa,294132,SouthAfrica,ZAF
+40,Ireland,293605,Ireland,IRL
+41,Venezuela,287274,Venezuela,VEN
+42,Pakistan,284185,Pakistan,PAK
+43,Colombia,282357,Colombia,COL
+44,Chile,247025,Chile,CHL
+45,Finland,236883,Finland,FIN
+46,Bangladesh,227901,Bangladesh,BGD
+47,Portugal,204761,Portugal,PRT
+48,Vietnam,201326,Vietnam,VNM
+49,Peru,195140,Peru,PER
+50,Greece,194248,Greece,GRC
+51,Czech Republic,192991,CzechRepublic,CZE
+52,Romania,187039,Romania,ROU
+53,New Zealand,181991,NewZealand,NZL
+54,Iraq,167026,Iraq,IRQ
+55,Algeria,160784,Algeria,DZA
+56,Qatar,156734,Qatar,QAT
+57,Kazakhstan,133757,Kazakhstan,KAZ
+58,Hungary,125675,Hungary,HUN
+59,Kuwait,109859,Kuwait,KWT
+60,Morocco,103615,Morocco,MAR
+61,Puerto Rico,101304,PuertoRico,PRI
+62,Ecuador,98010,Ecuador,ECU
+63,Angola,95821,Angola,AGO
+64,Sudan,94421,Sudan,SDN
+65,Ukraine,93263,Ukraine,UKR
+66,Slovakia,89525,Slovakia,SVK
+67,Sri Lanka,82615,SriLanka,LKA
+68,Syria[n 4],77460,Syria,SYR
+69,Ethiopia,72523,Ethiopia,ETH
+70,Dominican Republic,72194,DominicanRepublic,DOM
+71,Kenya,68919,Kenya,KEN
+72,Guatemala,68175,Guatemala,GTM
+73,Uzbekistan,66502,Uzbekistan,UZB
+74,Myanmar,66324,Myanmar,MMR
+75,Oman,63171,Oman,OMN
+76,Luxembourg,59468,Luxembourg,LUX
+77,Costa Rica,58109,CostaRica,CRI
+78,Panama,55122,Panama,PAN
+79,Uruguay,54567,Uruguay,URY
+80,Bulgaria,52418,Bulgaria,BGR
+81,Lebanon,51991,Lebanon,LBN
+82,Croatia,50441,Croatia,HRV
+83,Belarus,48847,Belarus,BLR
+84,Tanzania,47184,Tanzania,TZA
+85,Macau,44110,Macau,MAC
+86,Slovenia,44009,Slovenia,SVN
+87,Ghana,43264,Ghana,GHA
+88,Lithuania,42749,Lithuania,LTU
+89,Tunisia,41869,Tunisia,TUN
+90,Democratic Republic of the Congo,41615,DemocraticRepublicoftheCongo,COD
+91,Jordan,38743,Jordan,JOR
+92,Serbia,37745,Serbia,SRB
+93,Azerbaijan,37556,Azerbaijan,AZE
+94,Turkmenistan,36180,Turkmenistan,TKM
+95,Côte dIvoire,35489,CotedIvoire,CIV
+96,Bolivia,34831,Bolivia,BOL
+97,Libya,33157,Libya,LBY
+98,Bahrain,31907,Bahrain,BHR
+99,Cameroon,29334,Cameroon,CMR
+100,Latvia,27684,Latvia,LVA
+101,Paraguay,27441,Paraguay,PRY
+102,Yemen,27318,Yemen,YEM
+103,El Salvador,26709,ElSalvador,SLV
+104,Uganda,26195,Uganda,UGA
+105,Estonia,23130,Estonia,EST
+106,Honduras,21364,Honduras,HND
+107,Zambia,21310,Zambia,ZMB
+108,Nepal,21154,Nepal,NPL
+109,Trinidad and Tobago,20966,TrinidadandTobago,TTO
+110,Iceland,20047,Iceland,ISL
+111,Papua New Guinea,20003,PapuaNewGuinea,PNG
+112,Cyprus,19810,Cyprus,CYP
+113,Cambodia,19398,Cambodia,KHM
+114,Afghanistan,18886,Afghanistan,AFG
+115,Bosnia and Herzegovina,16605,BosniaandHerzegovina,BIH
+116,Botswana,15018,Botswana,BWA
+117,Senegal,14785,Senegal,SEN
+118,Gabon,14273,Gabon,GAB
+119,Georgia,14222,Georgia,GEO
+120,Zimbabwe,14174,Zimbabwe,ZWE
+121,Mali,13960,Mali,MLI
+122,Jamaica,13950,Jamaica,JAM
+123,Laos,13790,Laos,LAO
+124,Nicaragua,13049,Nicaragua,NIC
+125,Albania,12126,Albania,ALB
+126,Mauritius,11950,Mauritius,MUS
+127,Burkina Faso,11182,BurkinaFaso,BFA
+128,Equatorial Guinea,11636,EquatorialGuinea,GNQ
+129,Mozambique,11283,Mozambique,MOZ
+130,Brunei,11182,Brunei,BRN
+131,Mongolia,11031,Mongolia,MNG
+132,Malta,10953,Malta,MLT
+133,Macedonia,10912,Macedonia,MKD
+134,Namibia,10646,Namibia,NAM
+135,Armenia,10499,Armenia,ARM
+136,Chad,10103,Chad,TCD
+137,Madagascar,9740,Madagascar,MDG
+138,Bahamas,8939,Bahamas,BHS
+139,Benin,8577,Benin,BEN
+140,Rwanda,8406,Rwanda,RWA
+141,Haiti,8257,Haiti,HTI
+142,Republic of Congo,7955,RepublicofCongo,COD
+143,Niger,7479,Niger,NER
+144,Tajikistan,6922,Tajikistan,TJK
+145,Moldova,6750,Moldova,MDA
+146,Kosovo,6707,Kosovo,KSV
+147,Kyrgyzstan,6551,Kyrgyzstan,KGZ
+148,Guinea,6512,Guinea,GIN
+149,Malawi,5492,Malawi,MWI
+150,Eritrea,5352,Eritrea,ERI
+151,Mauritania,4714,Mauritania,MRT
+152,Fiji,4640,Fiji,FJI
+153,Barbados,4588,Barbados,BRB
+154,Togo,4434,Togo,TGO
+155,Montenegro,4126,Montenegro,MNE
+156,Sierra Leone,3981,SierraLeone,SLE
+157,Swaziland,3770,Swaziland,SWZ
+158,Suriname,3570,Suriname,SUR
+159,Guyana,3437,Guyana,GUY
+160,Maldives,3379,Maldives,MDV
+161,Burundi,3133,Burundi,BDI
+162,South Sudan,2914,SouthSudan,SSD
+163,Timor-Leste,2498,Timor-Leste,TLS
+164,Lesotho,2267,Lesotho,LSO
+165,Bhutan,2115,Bhutan,BTN
+166,Liberia,2111,Liberia,LBR
+167,Djibouti,1894,Djibouti,DJI
+168,Central African Republic,1780,CentralAfricanRepublic,CAF
+169,Belize,1743,Belize,BLZ
+170,Cabo Verde,1636,CaboVerde,CPV
+171,San Marino,1592,SanMarino,SMR
+172,Seychelles,1405,Seychelles,SYC
+173,Antigua and Barbuda,1398,AntiguaandBarbuda,ATG
+174,St. Lucia,1385,St.Lucia,LCA
+175,Solomon Islands,1184,SolomonIslands,SLB
+176,Guinea-Bissau,1155,Guinea-Bissau,GNB
+177,Grenada,1027,Grenada,GRD
+178,The Gambia,965,TheGambia,GMB
+179,St. Kitts and Nevis,903,St.KittsandNevis,KNA
+180,Samoa,786,Samoa,WSM
+181,St. Vincent and the Grenadines,775,St.VincentandtheGrenadines,VCT
+182,Vanuatu,773,Vanuatu,VUT
+183,Comoros,620,Comoros,COM
+184,Dominica,520,Dominica,DMA
+185,Tonga,403,Tonga,TON
+186,São Tomé and Príncipe,350,SãoToméandPríncipe,STP
+187,Federated States of Micronesia,322,FederatedStatesofMicronesia,FSM
+188,Palau,293,Palau,PLW
+189,Marshall Islands,183,MarshallIslands,MHL
+190,Kiribati,167,Kiribati,KIR
+191,Tuvalu,34,Tuvalu,TUV
